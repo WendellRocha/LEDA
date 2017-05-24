@@ -17,4 +17,13 @@ class RecursiveInsertionSort {
             recursiveInsertionSort(array, leftIndex + 1, rightIndex - 1);
         }
     }
+
+    public static void sort(int [] array, int i, int j) {
+        if (array == null)
+        throw new IllegalArgumentException();
+        
+        Object aux = array[i];
+        array[i] = array[j];
+        array[j] = aux;
+    }
 }

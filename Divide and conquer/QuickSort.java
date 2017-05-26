@@ -3,7 +3,7 @@ import java.util.*;
 class QuickSort {
 
     public static void quickSort(int [] array, int leftIndex, int rightIndex) {
-        if(array == null || leftIndex < 0 || leftIndex > rightIndex || rightIndex > array.length)
+        if(array == null || rightIndex > array.length)
             throw new IllegalArgumentException();
 
         if(leftIndex < rightIndex) {
@@ -19,8 +19,8 @@ class QuickSort {
         int i = begin;
         for(int j = i + 1; j <= end; j++) {
             if(array[j].compareTo(pivot) <= 0) {
-                swap(array, i, j);
                 i++;
+                swap(array, i, j);
             }
         }
         swap(array, begin, i);

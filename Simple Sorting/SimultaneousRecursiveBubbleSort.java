@@ -1,7 +1,7 @@
 import java.util.*;
 
-class RecursiveInsertionSort {
-    public static void recursiveInsertionSort(int [] array, int leftIndex, int rightIndex) {
+class SimultaneousRecursiveBubbleSort {
+    public static void simultaneousRecursiveBubbleSort(int [] array, int leftIndex, int rightIndex) {
         if(leftIndex < rightIndex) {
             for(int j = leftIndex; j < rightIndex; j++) {
                 if(array[j+1].compareTo(array[j]) < 0) {
@@ -14,7 +14,7 @@ class RecursiveInsertionSort {
                 }
             }
 
-            recursiveInsertionSort(array, leftIndex + 1, rightIndex - 1);
+            simultaneousRecursiveBubbleSort(array, leftIndex + 1, rightIndex - 1);
         }
     }
 

@@ -20,7 +20,7 @@ class SimultaneousRecursiveBubbleSort {
 
     public static void sort(int [] array, int i, int j) {
         if (array == null)
-        throw new IllegalArgumentException();
+            throw new IllegalArgumentException();
         
         Object aux = array[i];
         array[i] = array[j];

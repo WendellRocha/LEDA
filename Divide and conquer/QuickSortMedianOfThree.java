@@ -1,7 +1,13 @@
+/**
+ * Data Structures and Algorithms Laboratory
+ * Período 2017.1
+ * @author Wendell Rocha
+ */
+
 import java.util.*;
 
 class QuickSortMedianOfThree {
-    public void quickSortMedianOfThree(int array, int leftIndex, int rightIndex) {
+    public void quickSortMedianOfThree(int [] array, int leftIndex, int rightIndex) {
         if (leftIndex < rightIndex && leftIndex >= 0) {
 			int center = (leftIndex + rightIndex) / 2;
 			medianaDeTres(array, leftIndex, rightIndex, center);
@@ -11,7 +17,7 @@ class QuickSortMedianOfThree {
 			quickSortMedianOfThree(array, posicaoPivot + 1, rightIndex);
 		}
     }
-    private void medianaDeTres(T[] array, int leftIndex, int rightIndex, int center) {
+    private void medianaDeTres(int [] array, int leftIndex, int rightIndex, int center) {
 		if(array[leftIndex].compareTo(array[rightIndex]) > 0)
 			swap(array, leftIndex, rightIndex);
 		if(array[center].compareTo(array[leftIndex]) < 0)
@@ -20,7 +26,7 @@ class QuickSortMedianOfThree {
 			swap(array, center, rightIndex);
 	}
 	
-private int partition(int [] array, int begin, int end) {
+    private int partition(int [] array, int begin, int end) {
         int pivot = array[begin];
         int i = begin;
         for(int j = i + 1; j <= end; j++) {

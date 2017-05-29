@@ -1,3 +1,9 @@
+/**
+ * Data Structures and Algorithms Laboratory
+ * Período 2017.1
+ * @author Wendell Rocha
+ */
+
 import java.util.*;
 
 class SelectionSort {
@@ -5,7 +11,6 @@ class SelectionSort {
     public static void selectionSort(int [] array, int leftIndex, int rightIndex) {
         int menor;
         int indice;
-        
         for(int i = leftIndex; i < rightIndex; i++) {
             menor = array[i];
             indice = i;

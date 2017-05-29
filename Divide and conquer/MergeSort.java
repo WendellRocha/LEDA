@@ -14,7 +14,7 @@ class MergeSort {
 		}
     }
 
-    private void merge(T[] array, int leftIndex, int mid, int rightIndex) {
+    private void merge(int [] array, int leftIndex, int mid, int rightIndex) {
 		@SuppressWarnings("unchecked")
 		int[] aux = (int[]) new Comparable[rightIndex + 1];
 		
@@ -47,5 +47,4 @@ class MergeSort {
 			k++;
 		}
 	}
-
 }

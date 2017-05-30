@@ -7,7 +7,7 @@
 import java.util.*;
 
 class SimultaneousRecursiveBubbleSort {
-    public static void simultaneousRecursiveBubbleSort(int [] array, int leftIndex, int rightIndex) {
+    public void simultaneousRecursiveBubbleSort(int [] array, int leftIndex, int rightIndex) {
         if(leftIndex < rightIndex) {
             for(int j = leftIndex; j < rightIndex; j++) {
                 if(array[j+1].compareTo(array[j]) < 0) {
@@ -24,7 +24,7 @@ class SimultaneousRecursiveBubbleSort {
         }
     }
 
-    public static void sort(int [] array, int i, int j) {
+    public void sort(int [] array, int i, int j) {
         if (array == null)
             throw new IllegalArgumentException();
         

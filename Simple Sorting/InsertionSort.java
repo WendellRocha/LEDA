@@ -7,7 +7,7 @@
 import java.util.*;
 
 class InsertionSort {
-    public static void insertionSort(int [] array, int leftIndex, int rightIndex) {
+    public void insertionSort(int [] array, int leftIndex, int rightIndex) {
         for(int i = leftIndex; i <= rightIndex; i++){
             int key = array[i];
             int j = i - 1;
@@ -19,7 +19,7 @@ class InsertionSort {
         }
     }
 
-    public static void insertionSort(int [] array) {
+    public void insertionSort(int [] array) {
         for(int i = 1; i < array.length; i++) {
             int key = array[i];
             int j = i - 1;

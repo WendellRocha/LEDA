@@ -8,7 +8,7 @@ import java.util.*;
 
 class SelectionSort {
 
-    public static void selectionSort(int [] array, int leftIndex, int rightIndex) {
+    public void selectionSort(int [] array, int leftIndex, int rightIndex) {
         int menor;
         int indice;
         for(int i = leftIndex; i < rightIndex; i++) {
@@ -25,7 +25,7 @@ class SelectionSort {
         }
     }
 
-    public static void selectionSort(int [] array) {
+    public void selectionSort(int [] array) {
         int menor;
         int indice;
         for(int i = 0; i < array.length; i++) {

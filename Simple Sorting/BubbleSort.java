@@ -7,7 +7,7 @@
 import java.util.*;
 
 class BubbleSort {
-    public static void bubbleSort(int[] array, int leftIndex, int rightIndex) {
+    public void bubbleSort(int[] array, int leftIndex, int rightIndex) {
         for(int i = leftIndex; i < rightIndex; i++) {
             for(int j = leftIndex; j < rightIndex; j++) {
                 if(array[j].compareTo(array[j+1]) > 0) {
@@ -17,7 +17,7 @@ class BubbleSort {
         }
     }
 
-    public static void bubbleSort(int [] array) {
+    public void bubbleSort(int [] array) {
         boolean trocou = true;
         while(trocou) {
             trocou = false;
@@ -30,7 +30,7 @@ class BubbleSort {
         }
     }
 
-    public static void swap(int [] array, int i, int j) {
+    public void swap(int [] array, int i, int j) {
         if(array == null) 
             throw new IllegalArgumentException();
         

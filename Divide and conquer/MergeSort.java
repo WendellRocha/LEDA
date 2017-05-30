@@ -8,8 +8,8 @@ class MergeSort {
 		
 		if(leftIndex < rightIndex) {
 			int mid = (leftIndex + rightIndex) / 2;
-			sort(array, leftIndex, mid);
-			sort(array, mid + 1, rightIndex);
+			mergeSort(array, leftIndex, mid);
+			mergeSort(array, mid + 1, rightIndex);
 			merge(array, leftIndex, mid, rightIndex);
 		}
     }

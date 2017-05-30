@@ -8,7 +8,7 @@ import java.util.*;
 
 class QuickSort {
 
-    public static void quickSort(int [] array, int leftIndex, int rightIndex) {
+    public void quickSort(int [] array, int leftIndex, int rightIndex) {
         if(array == null || rightIndex > array.length)
             throw new IllegalArgumentException();
 

@@ -5,22 +5,26 @@
  */
 
 import java.util.*;
-public class CoutingSort {
+public class CountingSort {
 
-    public void sort(Integer [] array, int leftIndex, int rightIndex) {
-        int max = array[0];
+    public void sort(Integer[] array, int leftIndex, int rightIndex) {
+		if(array == null || rightIndex > array.length)
+			throw new IllegalArgumentException();
+		
+		int max = 0;
         for(int i = leftIndex; i <= rightIndex; i++) {
-            if(max.compareTo(array[i]) > 0) {
+            if(array[i].compareTo(max) > 0) {
                 max = array[i];
             }
         }
-    }
+        countingSort(array, max, leftIndex, rightIndex);
+	}
 
-    public void coutingSort(Integer [] array, int max, int leftIndex, int rightIndex) {
-        /**
+    public void countingSort(Integer [] array, int max, int leftIndex, int rightIndex) {
+       /**
          * cria o array auxiliar e preenche-o com zeros
          */
-        int [] aux = new int[max];
+        int [] aux = new int[max + 1];
         for(int i = leftIndex; i <= max; i++) {
             aux[i] = 0;
         }
@@ -28,14 +32,14 @@ public class CoutingSort {
         /**
          * realiza a contagem de ocorrencias no array desordenado
          */
-        for(int i = 0; i < array.length; i++) {
+        for(int i = leftIndex; i < rightIndex + 1; i++) {
             aux[array[i]]++;
         }
 
         /**
          * faz o complemento do número anterior
          */
-        for(int i = leftIndex; i < rightIndex; i++) {
+        for(int i = 1; i <= max; i++) {
             aux[i] += aux[i-1];
         }
 
@@ -43,14 +47,14 @@ public class CoutingSort {
          * ordena o array da esquerda para a direita
          */
         int [] arrayOrdenado = new int [array.length];
-        for(int j = rightIndex; j > leftIndex; j--) {
-            arrayOrdenado[--ayx[array[i]]] = array[i];
+        for(int i = rightIndex; i >= leftIndex; i--) {
+        	arrayOrdenado[--aux[array[i]]] = array[i];
         }
 
         /**
          * retorna os valores ordenados para o array de entrada
          */
-        for(int i = leftIndex; i < rightIndex; i++) {
+        for(int i = leftIndex; i < rightIndex + 1; i++) {
             array[i] = arrayOrdenado[i];
         }
     }

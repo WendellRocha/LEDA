@@ -8,7 +8,7 @@ import java.util.*;
 
 class QuickSort {
 
-    public void quickSort(int [] array, int leftIndex, int rightIndex) {
+    public void quickSort(T [] array, int leftIndex, int rightIndex) {
         if(array == null || rightIndex > array.length)
             throw new IllegalArgumentException();
 
@@ -21,7 +21,7 @@ class QuickSort {
     }
 
     private int partition(int [] array, int begin, int end) {
-        int pivot = array[begin];
+        T pivot = array[begin];
         int i = begin;
         for(int j = i + 1; j <= end; j++) {
             if(array[j].compareTo(pivot) <= 0) {
@@ -33,11 +33,11 @@ class QuickSort {
         return i;
     }
 
-    private void swap(int [] array, int i, int j) {
+    private void swap(T [] array, int i, int j) {
         if(array == null || i < 0 || j < 0)
             throw new IllegalArgumentException();   
         
-        int aux = array[i];
+        Object aux = array[i];
         array[i] = array[j];
         array[j] = aux;
 

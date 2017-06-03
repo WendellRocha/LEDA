@@ -2,7 +2,7 @@ import java.util.*;
 
 class MergeSort {
 
-    public void mergeSort(int [] array, int leftIndex, int rightIndex) {
+    public void mergeSort(T [] array, int leftIndex, int rightIndex) {
         if(array == null || rightIndex > array.length)
 			throw new IllegalArgumentException();
 		
@@ -14,9 +14,9 @@ class MergeSort {
 		}
     }
 
-    private void merge(int [] array, int leftIndex, int mid, int rightIndex) {
+    private void merge(T [] array, int leftIndex, int mid, int rightIndex) {
 		@SuppressWarnings("unchecked")
-		int[] aux = (int[]) new Comparable[rightIndex + 1];
+		T[] aux = (T[]) new Comparable[rightIndex + 1];
 		
 		for(int a = leftIndex; a <= rightIndex; a++) {
 			aux[a] = array[a];

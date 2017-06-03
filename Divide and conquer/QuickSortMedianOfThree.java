@@ -7,7 +7,7 @@
 import java.util.*;
 
 class QuickSortMedianOfThree {
-    public void quickSortMedianOfThree(int [] array, int leftIndex, int rightIndex) {
+    public void quickSortMedianOfThree(T [] array, int leftIndex, int rightIndex) {
         if (leftIndex < rightIndex && leftIndex >= 0) {
 			int center = (leftIndex + rightIndex) / 2;
 			medianaDeTres(array, leftIndex, rightIndex, center);
@@ -17,7 +17,7 @@ class QuickSortMedianOfThree {
 			quickSortMedianOfThree(array, posicaoPivot + 1, rightIndex);
 		}
     }
-    private void medianaDeTres(int [] array, int leftIndex, int rightIndex, int center) {
+    private void medianaDeTres(T [] array, int leftIndex, int rightIndex, int center) {
 		if(array[leftIndex].compareTo(array[rightIndex]) > 0)
 			swap(array, leftIndex, rightIndex);
 		if(array[center].compareTo(array[leftIndex]) < 0)
@@ -26,8 +26,8 @@ class QuickSortMedianOfThree {
 			swap(array, center, rightIndex);
 	}
 	
-    private int partition(int [] array, int begin, int end) {
-        int pivot = array[begin];
+    private int partition(T [] array, int begin, int end) {
+        T pivot = array[begin];
         int i = begin;
         for(int j = i + 1; j <= end; j++) {
             if(array[j].compareTo(pivot) <= 0) {
@@ -39,11 +39,11 @@ class QuickSortMedianOfThree {
         return i;
     }
 
-    private void swap(int [] array, int i, int j) {
+    private void swap(T [] array, int i, int j) {
         if(array == null || i < 0 || j < 0)
             throw new IllegalArgumentException();   
         
-        int aux = array[i];
+        T aux = array[i];
         array[i] = array[j];
         array[j] = aux;
 

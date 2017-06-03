@@ -16,7 +16,7 @@ public class CombSort {
         boolean trocou = true;
         int i = 0;
 
-        if(array.length == 0)
+        if(array.length <= 1)
             trocou = false;
 
         while(gap > 1 || trocou) {

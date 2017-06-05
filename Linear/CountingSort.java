@@ -25,10 +25,7 @@ public class CountingSort {
          * cria o array auxiliar e preenche-o com zeros
          */
         int [] aux = new int[max + 1];
-        for(int i = leftIndex; i <= max; i++) {
-            aux[i] = 0;
-        }
-
+        
         /**
          * realiza a contagem de ocorrencias no array desordenado
          */
@@ -54,8 +51,9 @@ public class CountingSort {
         /**
          * retorna os valores ordenados para o array de entrada
          */
+         int count = 0;
         for(int i = leftIndex; i < rightIndex + 1; i++) {
-            array[i] = arrayOrdenado[i];
+            array[i] = arrayOrdenado[count++];
         }
     }
 }

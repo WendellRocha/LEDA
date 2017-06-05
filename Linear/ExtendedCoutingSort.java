@@ -27,12 +27,7 @@ class ExtendedCoutingSort {
 
 	private void countingSort(Integer[] array, int min, int max, int leftIndex, int rightIndex) {
 		int [] aux = new int[min + max + 1];
-		/**
-         * cria o array auxiliar e preenche-o com zeros
-         */
-        for(int i = leftIndex; i <= max; i++) {
-            aux[i] = 0;
-        }
+		      
 
         /**
          * realiza a contagem de ocorrencias no array desordenado
@@ -59,8 +54,9 @@ class ExtendedCoutingSort {
         /**
          * retorna os valores ordenados para o array de entrada
          */
+         int count = 0;
         for(int i = leftIndex; i < rightIndex + 1; i++) {
-            array[i] = arrayOrdenado[i];
+            array[i] = arrayOrdenado[cont++];
         }
     }
 }

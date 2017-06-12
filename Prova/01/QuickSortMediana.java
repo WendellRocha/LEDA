@@ -1,6 +1,9 @@
-package sorting.divideAndConquer;
+/**
+ * Data Structures and Algorithms Laboratory
+ * Período 2017.1
+ * @author Wendell Rocha
+ */
 
-import sorting.AbstractSorting;
 import util.Util;
 
 /**
@@ -21,8 +24,7 @@ import util.Util;
  * - O uso do selection eh apenas para encontrar a mediana, mas nao deve
  *   modificar o array de forma alguma. 
  */
-public class QuickSortComMediana<T extends Comparable<T>> extends
-		AbstractSorting<T> {
+public class QuickSortComMediana<T extends Comparable<T>> {
 
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {

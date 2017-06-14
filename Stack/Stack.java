@@ -1,24 +1,23 @@
-import javax.management.RuntimeErrorException;
-
 /**
  * Data Structures and Algorithms Laboratory
  * Período 2017.1
  * @author Wendell Rocha
  */
 
+import java.util.*;
+
 class Stack<T> {
 
 	private T[] array;
 	private int top;
 
-	@SuppressWarnings("unchecked")
 	public Stack(int size) {
 		array = (T[]) new Object[size];
 		top = -1;
 	}
 
 	public T top() {
-		if(this.isEmpty())
+		if(isEmpty())
 			return null;
 		return array[top];
 	}
@@ -32,13 +31,13 @@ class Stack<T> {
 	}
 
 	public void push(T element) throws RuntimeException {
-		if(this.isFull())
+		if(isFull())
 			throw new RuntimeException("Stack is full.");
 		array[++top] = element;
 	}
 
-	public T pop() throws RuntimeErrorException {
-		if(this.isEmpty())
+	public T pop() throws RuntimeException {
+		if(isEmpty())
 			throw new RuntimeException("Stack is empty.");
 		T aux = array[top];
 		top--;

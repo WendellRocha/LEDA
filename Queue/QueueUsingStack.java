@@ -6,7 +6,7 @@
 
 import java.util.*;
 
-public class QueueUsingStack<T> implements Queue<T> {
+public class QueueUsingStack<T> {
 
 	private Stack<T> stack1;
 	private Stack<T> stack2;

@@ -1,15 +1,6 @@
-package adt.hashtable.closed;
-
 import java.util.LinkedList;
 
-import adt.hashtable.hashfunction.HashFunction;
-import adt.hashtable.hashfunction.HashFunctionClosedAddress;
-import adt.hashtable.hashfunction.HashFunctionClosedAddressMethod;
-import adt.hashtable.hashfunction.HashFunctionDivisionMethod;
-import adt.hashtable.hashfunction.HashFunctionFactory;
-import util.Util;
-
-public class HashtableClosedAddress<T> extends AbstractHashtableClosedAddress<T> {
+class HashtableClosedAddress<T> {
 
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

@@ -1,3 +1,10 @@
+/**
+ * Data Structures and Algorithms Laboratory
+ * Período 2017.1
+ * @author Wendell Rocha
+ */
+
+
 class RecursiveDoubleLinkedList<T> extends RecursiveSingleLinkedList<T> {
 
 	protected RecursiveDoubleLinkedList<T> previous;

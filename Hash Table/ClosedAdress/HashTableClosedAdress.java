@@ -1,3 +1,9 @@
+/**
+ * Data Structures and Algorithms Laboratory
+ * Período 2017.1
+ * @author Wendell Rocha
+ */
+
 import java.util.LinkedList;
 
 class HashtableClosedAddress<T> {
@@ -17,7 +23,7 @@ class HashtableClosedAddress<T> {
 
 	int getPrimeAbove(int number) {
 		int result = number + 1;
-		while (!Util.isPrime(result)) {
+		while (!isPrime(result)) {
 			result++;
 		}
 		return result;
@@ -81,4 +87,15 @@ class HashtableClosedAddress<T> {
 		int e = ((HashFunctionClosedAddress<T>) hashFunction).hash(element);
 		return e;
 	}
+
+	private static boolean isPrime(long n) {
+      boolean result = true;
+      for (int i = 2; i < n; i++) {
+         if (n % i == 0) {
+            result = false;
+            break;
+         }
+      }
+      return result;
+   }
 }

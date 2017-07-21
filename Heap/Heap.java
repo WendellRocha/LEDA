@@ -1,8 +1,10 @@
-package adt.heap;
+/**
+ * Data Structures and Algorithms Laboratory
+ * Período 2017.1
+ * @author Wendell Rocha
+ */
 
-import java.Arrays;
-import java.Comparator;
-
+import java.util.*;
 
 /**
  * O comportamento de qualquer heap é definido pelo heapify. Neste caso o

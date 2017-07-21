@@ -25,8 +25,8 @@ public class BST<T extends Comparable<T>> implements BST<T> {
 	public int height() {
 		return this.height(root);
 	}
-
-	private int height(BSTNode<T> node) {
+	
+	protected int height(BSTNode<T> node) {
 		if (node.isEmpty())
 			return -1;
 		else
@@ -151,8 +151,8 @@ public class BST<T extends Comparable<T>> implements BST<T> {
 		else
 			this.remove(node);
 	}
-
-	private void remove(BSTNode<T> node) {
+	
+	protected void remove(BSTNode<T> node) {
 		if (node.isEmpty())
 			return;
 
@@ -263,7 +263,7 @@ public class BST<T extends Comparable<T>> implements BST<T> {
 			result = 1 + size((BSTNode<T>) node.getLeft()) + size((BSTNode<T>) node.getRight());
 		}
 		return result;
-    }
+	}
     
     private static <T> T[] makeArrayOfComparable(int size) {
         @SuppressWarnings("unchecked")

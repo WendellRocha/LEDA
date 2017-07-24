@@ -11,7 +11,7 @@ public class AVL<T extends Comparable<T>> extends BST<T> implements	AVLTree<T> {
 	// AUXILIARY
 	protected int calculateBalance(BSTNode<T> node) {
 		if(node == null || node.isEmpty())
-			return 0;
+			return -1;
 		
 		BSTNode<T> left = (BSTNode<T>) node.getLeft();
 		BSTNode<T> right = (BSTNode<T>) node.getRight();
